@@ -1,0 +1,18 @@
+<mat-toolbar class="mat-elevation-z8">
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()" style="border: 0;
+  background: #fff;">
+      <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+      <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+  </button>
+  Jobs & Dashboard
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav="matSidenav" style="padding: 0;">
+    <app-side-nav class="widthten same"></app-side-nav>
+    <app-side-nav-two class="widthtwenty same"></app-side-nav-two>
+  </mat-sidenav>
+  <mat-sidenav-content style="border-left: 1px solid #e1e1e1;">
+    <app-main-part></app-main-part>
+    <app-employee></app-employee>
+  </mat-sidenav-content>
+</mat-sidenav-container>

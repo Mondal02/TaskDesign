@@ -1,0 +1,86 @@
+<div>
+  <mat-card class="cart">
+    <div class="cartinput">
+      <input matInput type="text" placeholder="Search">
+      <mat-icon>search</mat-icon>
+    </div>
+    <div class="cartEle">
+      <mat-icon style="margin-right: 2em;">email</mat-icon>
+      <mat-icon style="margin-right: 2em;">notifications</mat-icon>
+      <div class="button-container">
+        <button mat-mini-fab color="primary">
+          <mat-card-title>MB</mat-card-title>
+        </button>
+      </div>
+      <mat-form-field class="formField">
+        <mat-label>Maxbert</mat-label>
+        <mat-select>
+          <mat-option value="angular">Angular</mat-option>
+          <mat-option value="vue">Vue</mat-option>
+          <mat-option value="react">React</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </mat-card>
+  <mat-divider></mat-divider>
+  <mat-card class="allJob">
+    <div class="mat-display-2">All Jobs</div>
+    <div class="btn"><button mat-button>20</button></div>
+    <div class="drop">
+      <label>Export</label>
+      <select>
+        <option></option>
+        <option>1</option>
+        <option>1</option>
+        <option>1</option>
+      </select>
+    </div>
+    <div class="addBtn">
+      <button mat-button>
+        <mat-icon>add</mat-icon>
+        Add New Job
+      </button>
+    </div>
+  </mat-card>
+  <mat-card class="allJob">
+    <div class="mat-h4">1 Job selected</div>    
+    <div class="view">
+      <span class="mat-small">View By:</span>
+      <div class="drop">
+        <label>All</label>
+        <select>
+          <option></option>
+          <option>1</option>
+          <option>1</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+    <div class="sort">
+      <span class="mat-small">Sort By:</span>
+      <div class="drop">
+        <label>Recently Added</label>
+        <select>
+          <option></option>
+          <option>1</option>
+          <option>1</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+    <div class="record">
+      <span class="mat-small">Records per page:</span>
+      <div class="drop">
+        <label>10</label>
+        <select>
+          <option></option>
+          <option>1</option>
+          <option>1</option>
+          <option>1</option>
+        </select>
+      </div>
+    </div>
+  </mat-card>  
+  <mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page"></mat-paginator>
+  <mat-divider></mat-divider>
+</div>

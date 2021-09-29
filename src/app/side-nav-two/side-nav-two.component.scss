@@ -1,0 +1,83 @@
+.mat-card{
+  box-shadow: none;
+  border-radius: 0;
+  padding-right: 0;
+  .mat-icon{
+    font-size: 20px;
+    color: #5a677c;
+  }
+  .mat-card-title{
+    font-size: 12px;
+    display: inline-block;
+    color: #5a677c;
+    vertical-align: super;
+  }
+  .inputBox{
+    position: relative;
+    margin-top: 1em;
+    input{
+      margin-top: 1em;
+      padding: 10px 10px 10px 26px;
+      width: 90%;
+    }
+    .mat-icon{
+      position: absolute;
+      top: 0.9em;
+      left: 5px;
+      font-size: 24px;
+      color: #2b2a2a;
+    }
+  }
+  // .drop{
+    
+  // }
+  .wraper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90%;
+
+    .mat-icon{
+      font-size: 25px;
+      color: #00ba2b;
+      vertical-align: middle;
+    }
+  }
+  .mat-list{
+    padding-bottom: 10px;
+    .heiCol{
+      height: 25px;
+      color: #919ba7;
+      font-size: 12px;
+    }
+  }
+  .closed{
+    margin-top: 0.5em;
+    .mat-icon{
+      color: red;
+      font-size: 20px;
+      vertical-align: middle;
+    }
+  }
+  .draft{margin-top: 0.5em;}
+  
+  .mat-card-title{
+    display: inline-block;
+    margin: 0 5em 0 0.5em;
+  }
+  .mat-form-field{
+    font-size: 12px;
+    width: 35%;
+    vertical-align: middle;      
+  }  
+  .changeDrop{        
+    ::ng-deep .mat-select-arrow {
+      border-left: 5px solid;
+      border-right: 5px solid;
+      border-top: 4px solid;
+      color: #474466;
+    }
+  }
+  
+  ::ng-deep .mat-form-field-underline {display: none;}
+}

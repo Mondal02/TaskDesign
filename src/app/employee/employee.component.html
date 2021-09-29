@@ -1,0 +1,67 @@
+<div class="container" *ngFor='let items of data'>
+  <mat-card class="card1">
+    <mat-icon class="icon-style">check_box_outline_blank</mat-icon><span class="icon-wrap">{{items.id}}</span>
+    <mat-icon class="icon-style  txt-color">star</mat-icon><span class="icon-wrap"> <span class="txt-color">{{items.applicationNo}}</span>{{items.application}}</span>
+    <div class="verticalLine">
+      <mat-card class="mat-headline">{{items.title}}</mat-card>
+      <div class="drop align">
+        <label>Active</label>
+        <select>
+          <option></option>
+          <option>1</option>
+          <option>1</option>
+          <option>1</option>
+        </select>
+      </div>
+      <div class="icon-txt">
+        <mat-icon>location_on</mat-icon><span>{{items.place}}</span> 
+      </div>
+      <div class="icon-txt">
+        <mat-icon>label</mat-icon><span>{{items.recom}}</span>
+      </div>
+      <div class="team-img">
+        <p>{{items.teams}}</p>
+        <div style="display: inline-block;">
+          <div class="imgs one">
+            <img mat-card-sm-img src={{items.imgOne}} />
+          </div>
+          <div class="imgs two">
+            <img mat-card-sm-img src="{{items.imgTwo}}"/>
+          </div>
+          <div class="imgs three">
+            <img mat-card-sm-img src="{{items.imgThree}}"/>
+            </div>   
+        </div>
+        <div class="tat">{{items.tat}}<span>{{items.tatVal}}</span></div>
+      </div>
+    </div>
+    <button mat-button class="btn">Published</button>
+    <p style="display: inline-block;">Created on {{date|date}}</p>
+  </mat-card>
+  <mat-card class="card2">
+    <div class="icon-only">
+      <button mat-button>QA<mat-icon>clear</mat-icon></button>
+      <mat-icon>backspace</mat-icon>
+      <mat-icon>edit</mat-icon>
+      <mat-icon>share</mat-icon>
+      <mat-icon>delete</mat-icon>
+      <mat-icon>more_vert</mat-icon>
+    </div>
+    <div class="number">
+      <div *ngFor="let items of stats" class="contentStyle">
+        <div class="value" [ngStyle]="{'color':getColor(items.label)}">{{items.value}}</div>
+          <div class="label" style="padding: 0 40px;">
+            <mat-form-field>
+              <mat-label [ngStyle]="{'color':getColor(items.label)}">{{items.label}}</mat-label>
+                <mat-select style="width: 40%;">
+                  <mat-option value="20 Jobs">20 Jobs</mat-option>
+                  <mat-option value="120 Jobs">120 Jobs</mat-option>
+                  <mat-option value="100 Jobs">100 Jobs</mat-option>
+                </mat-select>
+            </mat-form-field>
+          </div>
+      </div>
+    </div>
+  </mat-card>
+  <mat-divider></mat-divider>
+</div>
